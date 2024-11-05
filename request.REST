@@ -1,0 +1,29 @@
+# Base URL for the API
+@url = http://localhost:3333
+
+# Get trade statistics for ETH/USDT
+# Parameters:
+#   symbol: Trading pair (ETH/USDT)
+#   since: Start timestamp in milliseconds
+#   to: End timestamp in milliseconds
+#   side: Trade side (sell)
+###
+GET {{url}}/get_trades_stat?symbol=BTC/USDT&since=1730801112308&to=1730801114308&side=buy
+
+# Get raw trades for ETH/USDT within a time range
+# Parameters:
+#   symbol: Trading pair (ETH/USDT)
+#   since: Start timestamp in milliseconds
+#   to: End timestamp in milliseconds
+###
+GET {{url}}/get_raw_trades?symbol=BTC/USDT&since=1730801112308&to=1730801114308
+
+# Subscribe to a new trading pair's websocket feed
+# Request body:
+#   symbol: Trading pair to subscribe to (ADA/USDT)
+###
+POST {{url}}/subscribe_trade_symbol
+
+{
+    "symbol": "ADA/USDT"
+}
