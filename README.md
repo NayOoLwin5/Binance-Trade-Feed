@@ -1,4 +1,4 @@
-# Crypto Trading Data Service
+# Binance Trading Data Service
 
 A FastAPI-based service that provides real-time cryptocurrency trading data from Binance via WebSocket connections.
 
